@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 // 3. update a single(PUT/PATCH) /api/posts/{id}
 //4.Delete (DELETE) /api/posts/{id}
 
-Route::get('/posts',);
+Route::apiResource('posts',PostController::class);
 
 //to create a resource (posts) in laravel
 
